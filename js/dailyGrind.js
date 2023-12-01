@@ -1,16 +1,12 @@
-alert("can you see this");
+// alert("can you see this");
 function coffeeTemplate(coffee){
     return `
     <p>
-    <img src="${coffee.pic}" alt="${coffe.alt}" id="coffee" />
-   <strong class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">${coffee.name}</strong>, ${coffee.desc}
+    <img src="${coffee.pic}" alt="${coffee.alt}" id="coffee" />
+    <strong class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">${coffee.name}</strong>, ${coffee.desc}
 </p>
     `;
 }
-<p>
-<img src="images/pumpkin-spice-latte.jpg" alt="Our Pumpkin Spice Latte tastes great on a Fall Day!" id="coffee" />
-<strong class="feature">Monday's Coffee Special:</strong> Monday's daily coffee special is <strong class="feature">Pumpkin Spice Latte</strong>, which makes us wish it was always Fall, as this is one of our top sellers!
-</p>
 
 let myDate = new Date();
 let myDay = myDate.getDay();
@@ -33,12 +29,12 @@ switch(myDay){
     case 1:
         today = "Monday";
         coffee = {
-            name: "Bubble Tea",
-            pic: "images/bubble-tea.jpg",
-            alt: "a picture of a bubble tea",
-            color: "pink",
-            day: "Tuesday",
-            desc: `I like me some Bubble Tea!`
+            name: "Caramel Latte",
+            pic: "images/caramel-latte.jpg",
+            alt: "a picture of a caramel latte",
+            color: "brown",
+            day: "Monday",
+            desc: `I like me some caramel latte!`
         };
     break;
 
@@ -57,48 +53,48 @@ switch(myDay){
     case 3:
         today = "Wednesday";
         coffee = {
-            name: "Bubble Tea",
-            pic: "images/bubble-tea.jpg",
-            alt: "a picture of a bubble tea",
-            color: "pink",
-            day: "Tuesday",
-            desc: `I like me some Bubble Tea!`
+            name: "Cold Brew",
+            pic: "images/cold-brew.jpg",
+            alt: "a picture of a cold brew",
+            color: "green",
+            day: "Wednesday",
+            desc: `I like me some Cold Brew!`
         };
     break;
 
     case 4:
         today = "Thursday";
         coffee = {
-            name: "Bubble Tea",
-            pic: "images/bubble-tea.jpg",
-            alt: "a picture of a bubble tea",
-            color: "pink",
-            day: "Tuesday",
-            desc: `I like me some Bubble Tea!`
+            name: "Drip Coffee",
+            pic: "images/drip.jpg",
+            alt: "a picture of a drip coffee",
+            color: "black",
+            day: "Thursday",
+            desc: `I like me some Drip Coffee!`
         };
     break;
 
     case 5:
         today = "Friday";
         coffee = {
-            name: "Bubble Tea",
-            pic: "images/bubble-tea.jpg",
-            alt: "a picture of a bubble tea",
-            color: "pink",
-            day: "Tuesday",
-            desc: `I like me some Bubble Tea!`
+            name: "Frappaccino",
+            pic: "images/frappaccino.jpg",
+            alt: "a picture of a frappaccino",
+            color: "purple",
+            day: "Friday",
+            desc: `I like me some Frappaccino!`
         };
     break;
 
     case 6:
         today = "Saturday";
         coffee = {
-            name: "Bubble Tea",
-            pic: "images/bubble-tea.jpg",
-            alt: "a picture of a bubble tea",
-            color: "pink",
-            day: "Tuesday",
-            desc: `I like me some Bubble Tea!`
+            name: "Mocha",
+            pic: "images/mocha.jpg",
+            alt: "a picture of a mocha",
+            color: "yellow",
+            day: "Saturday",
+            desc: `I like me some Mocha!`
         };
     break;
 
@@ -106,6 +102,9 @@ switch(myDay){
         today = "Something went wrong!";
     
 }
+
+
+console.log(today);
 // inject coffee data into page
 document.getElementById("coffee-cup").innerHTML = coffeeTemplate(coffee);
 document.querySelector("html").style.backgroundColor = coffee.color;
@@ -113,4 +112,4 @@ document.querySelector("html").style.backgroundColor = coffee.color;
 // let coffeeData = coffeeTemplate(coffee);
 // alert(coffeeData);
 
-console.log(coffee);
+// console.log(coffee);
